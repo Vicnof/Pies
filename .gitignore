@@ -1,6 +1,6 @@
 *
 !.gitignore
 !*.lua
-!*.db n
+!*.db
 !*.dat
 !*.png
