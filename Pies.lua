@@ -89,7 +89,8 @@ local Commands = {
 	["help"] = loadfile("Commands/Help.lua"),
 	["nordic"] = loadfile("Commands/Nordic.lua"),
 	["testb"] = loadfile("Commands/TestB.lua"),
-	["nightmare"] = loadfile("Commands/Nightmare.lua")
+	["nightmare"] = loadfile("Commands/Nightmare.lua"),
+    ["test"] = loadfile("Commands/Test.lua")
 }
 
 Client:on("messageCreate", function(Message)
