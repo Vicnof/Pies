@@ -3,8 +3,7 @@ local Client = Discordia.Client()
 
 Client:enableAllIntents()
 
-local SQLite = require("sqlite3")
-local Database = require("sqlite3").open("Verification.db")
+local Database = require("sqlite3").open("Data.db")
 local Prepared = Database:prepare[[
 	INSERT INTO VerificationData(UserID, CurrentCode)
 	VALUES(?, ?)
@@ -103,7 +102,7 @@ Client:on("messageCreate", function(Message)
 			end
 
 			if Commands[Arguments[1]] then
-				Commands[Arguments[1]](Client, Message, Arguments, SQLite)
+				Commands[Arguments[1]](Client, Message, Arguments, Database)
 			end
 
 			return
