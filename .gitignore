@@ -1,6 +1,6 @@
 *
 !.gitignore
-!*.lua
-!*.db
-!*.dat
-!*.png
+!**/*.lua
+!**/*.db
+!**/.*dat
+!**/.*png
