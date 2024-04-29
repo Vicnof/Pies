@@ -42,10 +42,10 @@ local Birthday = os.date("!*t", MidnightUTCBirthdayTimestamp)
 
 local OffsetFromUTC = -5
 if os.date("*t", os.time())["isdst"] then
-    Offset = -4
+    OffsetFromUTC = -4
 end
 
-Birthday["hour"] = Birthday["hour"] - Offset
+Birthday["hour"] = Birthday["hour"] - OffsetFromUTC
 
 local Prepared = Database:prepare[[
     INSERT INTO Birthdays(UserID, BirthdayTimestamp)
