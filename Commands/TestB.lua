@@ -28,33 +28,19 @@ if Day < 1 or Day > 31 or Day == nil then
     return
 end
 
-local CurrentYearBirthday = os.time {
+local Birthday = os.time {
     year = tonumber(os.date("%Y")),
     month = Month,
     day = Day,
     hour = 4
 }
 
-local NextYearBirthday = os.time {
-    year = tonumber(os.date("%Y")) + 1,
-    month = Month,
-    day = Day,
-    hour = 4
-}
-
-if CurrentYearBirthday < os.time() then
-    Message.channel:send {
-        content = Months[Month].." "..Days[Day]..", "..tostring(tonumber(os.date("%Y") + 1)).."\nor <t:"..NextYearBirthday..":R>",
-        reference = {
-            message = Message,
-            mention = false
-        }
-    }
-    return
+if Birthday < os.time() then
+    Birthday[year] = tonumber(os.date("%Y")) + 1
 end
 
 Message.channel:send {
-    content = Months[Month].." "..Days[Day]..", "..tostring(tonumber(os.date("%Y"))).."\nor <t:"..CurrentYearBirthday..":R>",
+    content = Months[Month].." "..Days[Day]..", "..tostring(tonumber(os.date("%Y") + 1)).."\nor <t:"..Birthday..":R>",
     reference = {
         message = Message,
         mention = false
