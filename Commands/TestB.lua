@@ -71,22 +71,24 @@ local Days = math.ceil((Get[2][1] - os.time()) / 86400) - 1
 
 if Days == 0 then
     Message.channel:send {
-    embed = {
-        title = "Broner Birthdays",
-        description = BirthdayText,
-        color = 5019893,
-        fields = {
-            {name = "Next Birthday", value = "It's <@"..Get[1][1]..">'s birthday!", inline = false}
-        },
-        footer = {
-            text = "Pies | built with <3 by EE"
+        content = "You can set your birthday via `p birthdays MM/DD`.",    
+        embed = {
+            title = "Broner Birthdays",
+            description = BirthdayText,
+            color = 5019893,
+            fields = {
+                {name = "Next Birthday", value = "It's <@"..Get[1][1]..">'s birthday!", inline = false}
+            },
+            footer = {
+                text = "Pies | built with <3 by EE"
+            }
         }
     }
-}
-return
+    return
 end
 
 Message.channel:send {
+    content = "You can set your birthday via `p birthdays MM/DD`.",
     embed = {
         title = "Broner Birthdays",
         description = BirthdayText,
