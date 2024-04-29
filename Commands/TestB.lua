@@ -64,7 +64,7 @@ local Get = Database:exec[[
 local BirthdayText = ""
 
 for Index, Timestamp in pairs(Get[2]) do
-    BirthdayText = BirthdayText.."🎂 <@"..Get[1][Index]..">: "..os.date("%B "..Days[os.date("*t", os.time(Timestamp))["day"]]..", %Y", os.time(Timestamp)).."\n"
+    BirthdayText = BirthdayText.."🎂 <@"..Get[1][Index]..">: "..os.date("%B "..Days[os.date("*t", Timestamp)["day"]]..", %Y", Timestamp).."\n"
 end
 
 local Days = math.ceil((Get[2][1] - os.time()) / 86400) - 1
