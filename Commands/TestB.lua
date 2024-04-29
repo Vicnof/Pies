@@ -1,4 +1,4 @@
-local Client, Message, Arguments = ...
+local Client, Message, Arguments, Database = ...
 
 local Month = tonumber(Arguments[2]:match("%d+"), 10)
 local Day = tonumber(Arguments[2]:reverse():match("%d+"):reverse(), 10)
@@ -28,19 +28,19 @@ if Day < 1 or Day > 31 or Day == nil then
     return
 end
 
-local Birthday = os.time {
-    year = tonumber(os.date("%Y")),
-    month = Month,
-    day = Day,
-    hour = 4
+local Birthday = {
+    ["year"] = tonumber(os.date("%Y")),
+    ["month"] = Month,
+    ["day"] = Day,
+    ["hour"] = 4
 }
 
-if Birthday < os.time() then
-    Birthday[year] = tonumber(os.date("%Y")) + 1
+if os.time(Birthday) < os.time() then
+    Birthday["year"] = tonumber(os.date("%Y")) + 1
 end
 
 Message.channel:send {
-    content = Months[Month].." "..Days[Day]..", "..tostring(tonumber(os.date("%Y") + 1)).."\nor <t:"..Birthday..":R>",
+    content = Months[Month].." "..Days[Day]..", "..tostring(tonumber(os.date("%Y") + 1)).."\nor <t:"..os.time(Birthday)..":R>",
     reference = {
         message = Message,
         mention = false
