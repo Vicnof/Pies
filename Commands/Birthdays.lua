@@ -46,7 +46,7 @@ local BirthdayText = ""
 for _, Array in pairs(Birthdays) do
 	BirthdayText = BirthdayText.."🎂 <@"..Array[1]..">: "..Months[Array[3]].." "..Days[Array[4]]..", "..Array[5].."\n"
 end
-p(Birthdays)
+
 local Days = math.ceil((Birthdays[1][2] - os.time()) / 86400) - 1
 
 if Days == 0 then
@@ -57,7 +57,7 @@ if Days == 0 then
 			description = BirthdayText,
 			color = 5019893,
 			fields = {
-				{name = "Next Birthday", value = "It's <@"..Get[1][1]..">'s birthday!", inline = false}
+				{name = "Next Birthday", value = "It's <@"..Birthdays[1][1]..">'s birthday!", inline = false}
 			},
 			footer = {
 				text = "Pies | built with <3 by EE"
@@ -74,7 +74,7 @@ Message.channel:send {
 		description = BirthdayText,
 		color = 5019893,
 		fields = {
-			{name = "Next Birthday", value = "<@"..Get[1][1]..">, in "..Days.." days", inline = false}
+			{name = "Next Birthday", value = "<@"..Birthdays[1][1]..">, in "..Days.." days", inline = false}
 		},
 		footer = {
 			text = "Pies | built with <3 by EE"
