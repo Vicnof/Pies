@@ -3,7 +3,15 @@ local Client = Discordia.Client()
 
 Client:enableAllIntents()
 
-local Database = require("sqlite3").open("Data.db")
+local Database = io.open("Data.db")
+
+if Database then
+    Database:close()
+    Database = require("sqlite3").open("Data.db")
+else
+    Database = nil
+end
+
 local Prepared = Database:prepare[[
 	INSERT INTO VerificationData(UserID, CurrentCode)
 	VALUES(?, ?)
@@ -33,6 +41,11 @@ local function GenerateVerificationCode(UserID)
 end
 
 Client:on("memberJoin", function(Member)
+
+    if not Database then
+        return
+    end
+
 	local Protected, Error = pcall(function()
 		local CodeWithZWS = GenerateVerificationCode(Member.user.id)
 
@@ -117,6 +130,9 @@ Client:on("messageCreate", function(Message)
 			return
 		end
 
+        if not Database then
+            return
+        end
 
 		for _, Role in pairs(Client._api:getGuildMember(SeverID, Message.author.id)["roles"]) do
 			if Role == VerificationRoleID then
