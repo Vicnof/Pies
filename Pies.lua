@@ -124,7 +124,7 @@ local Days = {"1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10
 local Month = tonumber(Arguments[2]:match("%d+"), 10)
 local Day = tonumber(Arguments[2]:reverse():match("%d+"):reverse(), 10)
 
-if Month < 1 or Month > 12 or not then
+if not Month or Month < 1 or Month > 12 then
 	Message.channel:send {
 		content = "Invalid month, please set your birthday in the format MM/DD.",
 		reference = {
@@ -135,7 +135,7 @@ if Month < 1 or Month > 12 or not then
 	return
 end
 
-if Day < 1 or Day > 31 or not Day then
+if not Day or Day < 1 or Day > 31then
 	Message.channel:send {
 		content = "Invalid day, please set your birthday in the format MM/DD.",
 		reference = {
