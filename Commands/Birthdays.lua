@@ -27,7 +27,7 @@ for Index, Birthday in pairs(Get[2]) do
 	-- Convert to timestamp
 
 	if os.time(BirthdayTable) < os.time() then
-		BirthdayTable[year] = BirthdayTable["year"] + 1
+		BirthdayTable["year"] = BirthdayTable["year"] + 1
 	end
 
 	table.insert(Birthdays, {Get[1][Index], os.time(BirthdayTable), Month, Day, BirthdayTable["year"]})
