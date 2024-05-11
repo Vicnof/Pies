@@ -4,20 +4,21 @@ local Client = Discordia.Client()
 Client:enableAllIntents()
 
 local Database = io.open("Data.db")
+local Prepared
 
 if Database then
     Database:close()
     Database = require("sqlite3").open("Data.db")
-else
-    Database = nil
-end
 
-local Prepared = Database:prepare[[
+    Prepared = Database:prepare[[
 	INSERT INTO VerificationData(UserID, CurrentCode)
 	VALUES(?, ?)
 	ON CONFLICT(UserID)
 	DO UPDATE SET CurrentCode = ?;
 ]]
+else
+    Database = nil
+end
 
 local SeverID = "960713019753644032"
 local VerificationRoleID = "1225270334043979859"
