@@ -135,7 +135,7 @@ if not Month or Month < 1 or Month > 12 then
 	return
 end
 
-if not Day or Day < 1 or Day > 31then
+if not Day or Day < 1 or Day > 31 then
 	Message.channel:send {
 		content = "Invalid day, please set your birthday in the format MM/DD.",
 		reference = {
