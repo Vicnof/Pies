@@ -5,8 +5,7 @@ Client:enableAllIntents()
 
 local Database = io.open("Data.db")
 local Prepared
-p("here")
-p(Database)
+
 if Database then
     Database:close()
     Database = require("sqlite3").open("Data.db")
@@ -117,7 +116,8 @@ Client:on("messageCreate", function(Message)
 			for Match in Message.content:lower():sub(Message.content:find("%s") + 1):gmatch("%S+") do
 				table.insert(Arguments, Match)
 			end
-
+            p(Arguments[1])
+            p(Commands[Arguments[1]])
 			if Commands[Arguments[1]] then
 				Commands[Arguments[1]](Client, Message, Arguments, Database)
 			end
