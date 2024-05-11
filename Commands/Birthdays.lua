@@ -26,7 +26,7 @@ for Index, Birthday in pairs(Get[2]) do
 
 	-- Convert to timestamp
 
-	if os.time(BirthdayTable) < os.time() then
+	if os.time(BirthdayTable) < (os.time() - 86400) then
 		BirthdayTable["year"] = BirthdayTable["year"] + 1
 	end
 
