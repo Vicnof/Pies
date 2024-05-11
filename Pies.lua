@@ -7,6 +7,7 @@ local Database = io.open("Data.db")
 local Prepared
 
 if Database then
+    p("Exists")
     Database:close()
     Database = require("sqlite3").open("Data.db")
 
