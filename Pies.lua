@@ -5,9 +5,9 @@ Client:enableAllIntents()
 
 local Database = io.open("Data.db")
 local Prepared
-
+p("here")
+p(Database)
 if Database then
-    p("Exists")
     Database:close()
     Database = require("sqlite3").open("Data.db")
 
