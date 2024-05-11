@@ -49,7 +49,7 @@ end
 
 local Days = math.ceil((Birthdays[1][2] - os.time()) / 86400) - 1
 
-if Days == 0 then
+if Days <= 1 then
 	Message.channel:send {
 		content = "You can set your birthday via `p setbirthday MM/DD`.",    
 		embed = {
