@@ -7,7 +7,7 @@ Message.channel:send {
         image = {
             url = "https://services.swpc.noaa.gov/experimental/images/aurora_dashboard/tonights_static_viewline_forecast.png"
         },
-        color = 13700517
+        color = 5523574
     },
     reference = {
         message = Message,
