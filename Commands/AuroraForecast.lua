@@ -1,7 +1,7 @@
 local Client, Message, Arguments, Database = ...
 
 Message.channel:send {
-    content = "This is the latest 24-hour forecast (everywhere the aurora is likely to be visible from in the next 24-hours) from NOAA. It shows the Northern Hemisphere only."
+    content = "This is the latest 24-hour forecast (everywhere the aurora is likely to be visible from in the next 24-hours) from NOAA. It shows the Northern Hemisphere only.",
     embed = {
         title = "From NOAA:",
         url = "https://www.swpc.noaa.gov/communities/aurora-dashboard-experimental",
