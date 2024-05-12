@@ -106,7 +106,9 @@ local Commands = {
 	["nightmare"] = loadfile("Commands/Nightmare.lua"),
     ["test"] = loadfile("Commands/Test.lua"),
     ["setbirthday"] = loadfile("Commands/SetBirthday.lua"),
-    ["aurora"] = loadfile("Commands/Aurora.lua")
+    ["auroraforecast"] = loadfile("Commands/AuroraForecast.lua"),
+    ["auroranow"] = loadfile("Commands/AuroraNow.lua"),
+    ["aurora"] = loadfile("Commands/AuroraNow.lua")
 }
 
 Client:on("messageCreate", function(Message)
