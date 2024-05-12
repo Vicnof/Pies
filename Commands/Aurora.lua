@@ -1,0 +1,15 @@
+local Client, Message, Arguments, Database = ...
+
+Message.channel:send {
+    content = "Here's tonight's aurora forecast.",
+    embed = {
+        title = "From NOAA:",
+        url = "https://www.swpc.noaa.gov/communities/aurora-dashboard-experimental",
+        image = "https://services.swpc.noaa.gov/experimental/images/aurora_dashboard/tonights_static_viewline_forecast.png",
+        color = 13700517
+    },
+    reference = {
+        message = Message,
+        mention = false
+    }
+}
