@@ -37,7 +37,7 @@ Timer.sleep(3000)
 local Original = ">"
 
 for _, Argument in pairs(Arguments) do
-	Original = Original.." "..Argument"
+	Original = Original.." "..Argument
 end
 
 Message.channel:send {
