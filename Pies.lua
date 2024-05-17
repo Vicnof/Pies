@@ -1,5 +1,6 @@
 local Discordia = require("discordia")
 local Client = Discordia.Client()
+local Timer = require("timer")
 
 Client:enableAllIntents()
 
@@ -121,7 +122,7 @@ Client:on("messageCreate", function(Message)
 			end
 
 			if Commands[Arguments[1]] then
-				Commands[Arguments[1]](Client, Message, Arguments, Database)
+				Commands[Arguments[1]](Client, Message, Arguments, Database, Timer)
 			end
 
 			return
