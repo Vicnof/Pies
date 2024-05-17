@@ -109,7 +109,12 @@ local Commands = {
     ["setbirthday"] = loadfile("Commands/SetBirthday.lua"),
     ["auroraforecast"] = loadfile("Commands/AuroraForecast.lua"),
     ["auroranow"] = loadfile("Commands/AuroraNow.lua"),
-    ["aurora"] = loadfile("Commands/AuroraNow.lua")
+    ["aurora"] = loadfile("Commands/AuroraNow.lua"),
+    ["8ball"] = loadfile("Commands/8ball.lua"),
+    ["ball"] = loadfile("Commands/8ball.lua"),
+    ["flip"] = loadfile("Commands/Flip.lua"),
+    ["coinflip"] = loadfile("Commands/Flip.lua"),
+    ["coin"] = loadfile("Commands/Flip.lua")
 }
 
 Client:on("messageCreate", function(Message)
