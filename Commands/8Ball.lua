@@ -20,7 +20,12 @@ local Answers = {
 	"My reply is no.",
 	"My sources say no.",
 	"Outlook not so good.",
-	"Very doubtful."
+	"Very doubtful.",
+	"Absolutely.",
+	"I guarantee it.",
+	"Of course.",
+	"idk",
+	"nah"
 }
 
 Message.channel:send("Thinking...")
@@ -29,8 +34,14 @@ Message.channel:broadcastTyping()
 
 Timer.sleep(3000)
 
+local Original = ">"
+
+for _, Argument in pairs(Arguments) do
+	Original = Original.." "..Argument"
+end
+
 Message.channel:send {
-	content = "🎱 "..Answers[math.random(1, #Answers)],
+	content = Original.."\n\n🎱 "..Answers[math.random(1, #Answers)],
 	reference = {
 		message = Message,
 		mention = true
