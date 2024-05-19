@@ -6,7 +6,7 @@ Message.channel:broadcastTyping()
 
 Timer.sleep(3000)
 
-local Result = "",
+local Result = ""
 local RNG = math.random(1, 1000)
 
 if RNG == 1 then
