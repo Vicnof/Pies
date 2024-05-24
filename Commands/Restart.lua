@@ -8,6 +8,6 @@ end
 
 --Timer.sleep(3000)
 
-os.execute("pwd")
+print(io.popen("pwd"):read("*a"))
 
 --process:exit()
