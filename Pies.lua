@@ -114,7 +114,8 @@ local Commands = {
     ["ball"] = loadfile("Commands/8Ball.lua"),
     ["flip"] = loadfile("Commands/Flip.lua"),
     ["coinflip"] = loadfile("Commands/Flip.lua"),
-    ["coin"] = loadfile("Commands/Flip.lua")
+    ["coin"] = loadfile("Commands/Flip.lua"),
+	["restart"]  = loadfile("Commands/Restart.lua")
 }
 
 Client:on("messageCreate", function(Message)
