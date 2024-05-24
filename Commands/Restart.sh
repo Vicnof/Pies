@@ -1,3 +1,3 @@
 #!/bin/bash
 
-pwd
+nohup ./luvit Pies.lua
