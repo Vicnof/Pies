@@ -8,6 +8,6 @@ end
 
 --Timer.sleep(3000)
 
-print(io.popen("pwd"):read("*a"))
+print(io.popen("bash Restart.sh"):read("*a"))
 
 --process:exit()
