@@ -4,10 +4,10 @@ if Message.author.id ~= "240291244306071552" then
 	return
 end
 
---Client:stop()
+Client:stop()
 
---Timer.sleep(3000)
+Timer.sleep(3000)
 
-print(io.popen("bash Restart.sh"):read("*a"))
+os.execute("bash Commands/Restart.sh")
 
---process:exit()
+process:exit()
