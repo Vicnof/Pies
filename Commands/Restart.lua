@@ -8,6 +8,6 @@ Client:stop()
 
 Timer.sleep(3000)
 
-os.execute("bash Commands/Restart.sh")
+io.popen("bash Commands/Restart.sh")
 
 process:exit()
