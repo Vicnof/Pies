@@ -8,6 +8,6 @@ Client:stop()
 
 Timer.sleep(3000)
 
-os.execute("bash Commands/Update.sh")
+io.popen("bash Commands/Update.sh")
 
 process:exit()
