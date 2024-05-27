@@ -5,9 +5,5 @@ if Message.author.id ~= "240291244306071552" then
 end
 
 Client:stop()
-
-Timer.sleep(3000)
-
-io.popen("bash Commands/Restart.sh")
-
+Timer.sleep(3000) -- Let any database operations finish up
 process:exit()
