@@ -116,9 +116,7 @@ local Commands = {
     ["coinflip"] = loadfile("Commands/Flip.lua"),
     ["coin"] = loadfile("Commands/Flip.lua"),
 	["restart"]  = loadfile("Commands/Restart.lua"),
-    ["shutdown"] = loadfile("Commands/Shutdown.lua"),
-   ["update"] = loadfile("Commands/Update.lua"),
-   ["kill"] = loadfile("Commands/Shutdown.lua")
+   ["update"] = loadfile("Commands/Update.lua")
 }
 
 Client:on("messageCreate", function(Message)
