@@ -3,7 +3,7 @@ local Client, Message, Arguments = ...
 local SemesterEnd = os.time {
     year = 2024,
     month = 6,
-    day = 15,
+    day = 14,
     hour = 4,
 }
 
@@ -22,7 +22,7 @@ end
 
 if Days == 1 then
     Message.channel:send {
-        content = "The final day.",
+        content = "The final day!",
         reference = {
             message = Message,
             mention = false
@@ -32,7 +32,7 @@ if Days == 1 then
 end
 
 Message.channel:send {
-    content = Days.." shifts until Nordic goes on vacation.",
+    content = Days.." days until Nordic goes on vacation!",
     reference = {
         message = Message,
         mention = false
