@@ -1,8 +1,8 @@
 local Command, Message, Arguments, Database, Timer = ...
 
-if Message.mentionedEmojis[1] == nil then
+if Message.mentionedEmojis.first == nil then
 	Message.channel:send("No emoji mentioned.")
  	return
 end
 
-Message.channel:send(Message.mentionedEmojis[1].url)
+Message.channel:send(Message.mentionedEmojis.first.url)
