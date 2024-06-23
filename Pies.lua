@@ -116,7 +116,8 @@ local Commands = {
     ["coinflip"] = loadfile("Commands/Flip.lua"),
     ["coin"] = loadfile("Commands/Flip.lua"),
 	["restart"]  = loadfile("Commands/Restart.lua"),
-   ["update"] = loadfile("Commands/Update.lua")
+   ["update"] = loadfile("Commands/Update.lua"),
+	["emoji"] = loadfile("Commands/Emoji.lua")
 }
 
 Client:on("messageCreate", function(Message)
