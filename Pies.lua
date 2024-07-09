@@ -1,6 +1,8 @@
 local Discordia = require("discordia")
 local Client = Discordia.Client()
 local Timer = require("timer")
+local HTTP = require("coro-http")
+local JSON = require("json")
 
 Client:enableAllIntents()
 
@@ -117,7 +119,9 @@ local Commands = {
     ["coin"] = loadfile("Commands/Flip.lua"),
 	["restart"]  = loadfile("Commands/Restart.lua"),
    ["update"] = loadfile("Commands/Update.lua"),
-	["emoji"] = loadfile("Commands/Emoji.lua")
+	["emoji"] = loadfile("Commands/Emoji.lua"),
+	["color"] = loadfile("Commands/Color.lua"),
+	["colour"] = loadfile("Commands/Color.lua")
 }
 
 Client:on("messageCreate", function(Message)
@@ -130,7 +134,7 @@ Client:on("messageCreate", function(Message)
 			end
 
 			if Commands[Arguments[1]] then
-				Commands[Arguments[1]](Client, Message, Arguments, Database, Timer)
+				Commands[Arguments[1]](Client, Message, Arguments, Database, Timer, HTTP, JSON)
 			end
 
 			return
