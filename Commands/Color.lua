@@ -36,6 +36,7 @@ Message.channel:send {
         title = "#"..HexColor:lower(),
         description = "**Name**: "..ColorData["seed"]["name"]["value"].."\n**RGB**: "..ColorData["seed"]["rgb"]["value"]:match("[%d,%s%%]+").."\n**HSV**: "..ColorData["seed"]["hsv"]["value"]:match("[%d,%s%%]+").."\n**HSL**: "..ColorData["seed"]["rgb"]["value"]:match("[%d,%s%%]+").."\n**CMYK**: "..ColorData["seed"]["cmyk"]["value"]:match("[%d,%s%%]+").."\n**XYZ**: "..ColorData["seed"]["XYZ"]["value"]:match("[%d,%s%%]+"),
         color = tonumber(HexColor, 16),
+        image = {url = "attachment://"..HexColor..".PNG"},
         thumbnail = {url = "https://singlecolorimage.com/get/"..HexColor.."/100x100"},
         fields = {
             {name = ColorData["colors"][1]["name"]["value"], value = "**RGB**: "..ColorData["colors"][1]["rgb"]["value"]:match("[%d,%s%%]+").."\n**HSV**: "..ColorData["colors"][1]["hsv"]["value"]:match("[%d,%s%%]+").."\n**HSL**: "..ColorData["colors"][1]["hsl"]["value"]:match("[%d,%s%%]+").."\n**CMYK**: "..ColorData["colors"][1]["cmyk"]["value"]:match("[%d,%s%%]+").."\n**XYZ**: "..ColorData["colors"][1]["XYZ"]["value"]:match("[%d,%s%%]+"), inline = true},
@@ -44,9 +45,9 @@ Message.channel:send {
             {name = ColorData["colors"][4]["name"]["value"], value = "**RGB**: "..ColorData["colors"][4]["rgb"]["value"]:match("[%d,%s%%]+").."\n**HSV**: "..ColorData["colors"][4]["hsv"]["value"]:match("[%d,%s%%]+").."\n**HSL**: "..ColorData["colors"][4]["hsl"]["value"]:match("[%d,%s%%]+").."\n**CMYK**: "..ColorData["colors"][4]["cmyk"]["value"]:match("[%d,%s%%]+").."\n**XYZ**: "..ColorData["colors"][4]["XYZ"]["value"]:match("[%d,%s%%]+"), inline = true},
             {name = ColorData["colors"][5]["name"]["value"], value = "**RGB**: "..ColorData["colors"][5]["rgb"]["value"]:match("[%d,%s%%]+").."\n**HSV**: "..ColorData["colors"][5]["hsv"]["value"]:match("[%d,%s%%]+").."\n**HSL**: "..ColorData["colors"][5]["hsl"]["value"]:match("[%d,%s%%]+").."\n**CMYK**: "..ColorData["colors"][5]["cmyk"]["value"]:match("[%d,%s%%]+").."\n**XYZ**: "..ColorData["colors"][5]["XYZ"]["value"]:match("[%d,%s%%]+"), inline = true},
             {name = ColorData["colors"][6]["name"]["value"], value = "**RGB**: "..ColorData["colors"][6]["rgb"]["value"]:match("[%d,%s%%]+").."\n**HSV**: "..ColorData["colors"][6]["hsv"]["value"]:match("[%d,%s%%]+").."\n**HSL**: "..ColorData["colors"][6]["hsl"]["value"]:match("[%d,%s%%]+").."\n**CMYK**: "..ColorData["colors"][6]["cmyk"]["value"]:match("[%d,%s%%]+").."\n**XYZ**: "..ColorData["colors"][6]["XYZ"]["value"]:match("[%d,%s%%]+"), inline = true},
-        },
-        image = HexColor..".PNG"
-    }
+        }
+    },
+file = HexColor..".PNG"
 }
 
 os.execute("rm "..HexColor..".PNG")
