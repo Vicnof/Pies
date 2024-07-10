@@ -19,7 +19,7 @@ if string.len(HexColor) ~= 6 then
     return
 end
 
-local Response, Body = HTTP.request("GET", "https://www.thecolorapi.com/scheme?hex="..HexColor.."&format=json&mode=analogic&count=6")
+local Response, Body = HTTP.request("GET", "https://www.thecolorapi.com/scheme?hex="..HexColor.."&format=json&mode=analogic&count=4")
 
 if Response.code ~= 200 then
     Message.channel:send("Sorry, the API this command relies on is down right now.")
@@ -43,8 +43,8 @@ Message.channel:send {
             {name = ColorData["colors"][2]["name"]["value"], value = "**RGB**: "..ColorData["colors"][2]["rgb"]["value"]:match("[%d,%s%%]+").."\n**HSV**: "..ColorData["colors"][2]["hsv"]["value"]:match("[%d,%s%%]+").."\n**HSL**: "..ColorData["colors"][2]["hsl"]["value"]:match("[%d,%s%%]+").."\n**CMYK**: "..ColorData["colors"][2]["cmyk"]["value"]:match("[%d,%s%%]+").."\n**XYZ**: "..ColorData["colors"][2]["XYZ"]["value"]:match("[%d,%s%%]+"), inline = true},
             {name = ColorData["colors"][3]["name"]["value"], value = "**RGB**: "..ColorData["colors"][3]["rgb"]["value"]:match("[%d,%s%%]+").."\n**HSV**: "..ColorData["colors"][3]["hsv"]["value"]:match("[%d,%s%%]+").."\n**HSL**: "..ColorData["colors"][3]["hsl"]["value"]:match("[%d,%s%%]+").."\n**CMYK**: "..ColorData["colors"][3]["cmyk"]["value"]:match("[%d,%s%%]+").."\n**XYZ**: "..ColorData["colors"][3]["XYZ"]["value"]:match("[%d,%s%%]+"), inline = true},
             {name = ColorData["colors"][4]["name"]["value"], value = "**RGB**: "..ColorData["colors"][4]["rgb"]["value"]:match("[%d,%s%%]+").."\n**HSV**: "..ColorData["colors"][4]["hsv"]["value"]:match("[%d,%s%%]+").."\n**HSL**: "..ColorData["colors"][4]["hsl"]["value"]:match("[%d,%s%%]+").."\n**CMYK**: "..ColorData["colors"][4]["cmyk"]["value"]:match("[%d,%s%%]+").."\n**XYZ**: "..ColorData["colors"][4]["XYZ"]["value"]:match("[%d,%s%%]+"), inline = true},
-            {name = ColorData["colors"][5]["name"]["value"], value = "**RGB**: "..ColorData["colors"][5]["rgb"]["value"]:match("[%d,%s%%]+").."\n**HSV**: "..ColorData["colors"][5]["hsv"]["value"]:match("[%d,%s%%]+").."\n**HSL**: "..ColorData["colors"][5]["hsl"]["value"]:match("[%d,%s%%]+").."\n**CMYK**: "..ColorData["colors"][5]["cmyk"]["value"]:match("[%d,%s%%]+").."\n**XYZ**: "..ColorData["colors"][5]["XYZ"]["value"]:match("[%d,%s%%]+"), inline = true},
-            {name = ColorData["colors"][6]["name"]["value"], value = "**RGB**: "..ColorData["colors"][6]["rgb"]["value"]:match("[%d,%s%%]+").."\n**HSV**: "..ColorData["colors"][6]["hsv"]["value"]:match("[%d,%s%%]+").."\n**HSL**: "..ColorData["colors"][6]["hsl"]["value"]:match("[%d,%s%%]+").."\n**CMYK**: "..ColorData["colors"][6]["cmyk"]["value"]:match("[%d,%s%%]+").."\n**XYZ**: "..ColorData["colors"][6]["XYZ"]["value"]:match("[%d,%s%%]+"), inline = true},
+            --{name = ColorData["colors"][5]["name"]["value"], value = "**RGB**: "..ColorData["colors"][5]["rgb"]["value"]:match("[%d,%s%%]+").."\n**HSV**: "..ColorData["colors"][5]["hsv"]["value"]:match("[%d,%s%%]+").."\n**HSL**: "..ColorData["colors"][5]["hsl"]["value"]:match("[%d,%s%%]+").."\n**CMYK**: "..ColorData["colors"][5]["cmyk"]["value"]:match("[%d,%s%%]+").."\n**XYZ**: "..ColorData["colors"][5]["XYZ"]["value"]:match("[%d,%s%%]+"), inline = true},
+            --{name = ColorData["colors"][6]["name"]["value"], value = "**RGB**: "..ColorData["colors"][6]["rgb"]["value"]:match("[%d,%s%%]+").."\n**HSV**: "..ColorData["colors"][6]["hsv"]["value"]:match("[%d,%s%%]+").."\n**HSL**: "..ColorData["colors"][6]["hsl"]["value"]:match("[%d,%s%%]+").."\n**CMYK**: "..ColorData["colors"][6]["cmyk"]["value"]:match("[%d,%s%%]+").."\n**XYZ**: "..ColorData["colors"][6]["XYZ"]["value"]:match("[%d,%s%%]+"), inline = true},
         }
     },
 file = HexColor..".PNG"
