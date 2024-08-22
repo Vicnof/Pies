@@ -46,7 +46,7 @@ local BirthdayText = ""
 for _, Array in pairs(Birthdays) do
 	BirthdayText = BirthdayText.."🎂 <@"..Array[1]..">: "..Months[Array[3]].." "..Days[Array[4]]..", "..Array[5].."\n"
 end
-
+Client:getUser(240291244306071552):send("```"..BirthdayText.."```")
 local Days = math.ceil((Birthdays[1][2] - os.time()) / 86400) - 1
 
 if Days <= 1 then
