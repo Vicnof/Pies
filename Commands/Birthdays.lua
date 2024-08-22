@@ -46,7 +46,9 @@ local BirthdayText = ""
 for _, Array in pairs(Birthdays) do
 	BirthdayText = BirthdayText.."🎂 <@"..Array[1]..">: "..Months[Array[3]].." "..Days[Array[4]]..", "..Array[5].."\n"
 end
-Client:getUser(240291244306071552):send("```"..BirthdayText.."```")
+
+BirthdayText = string.sub(46, BirthdayText)
+
 local Days = math.ceil((Birthdays[1][2] - os.time()) / 86400) - 1
 
 if Days <= 1 then
@@ -57,7 +59,7 @@ if Days <= 1 then
 			description = BirthdayText,
 			color = 5019893,
 			fields = {
-				{name = "Next Birthday", value = "It's <@"..Birthdays[1][1]..">'s birthday!", inline = false}
+				{name = "Next Birthday", value = "It's <@"..252235505318625281..">'s birthday!", inline = false}
 			},
 			footer = {
 				text = "Pies | built with <3 by EE"
