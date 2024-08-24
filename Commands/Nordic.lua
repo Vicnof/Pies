@@ -2,8 +2,8 @@ local Client, Message, Arguments = ...
 
 local SemesterEnd = os.time {
     year = 2024,
-    month = 6,
-    day = 14,
+    month = 9,
+    day = 15,
     hour = 4,
 }
 
@@ -11,7 +11,7 @@ local Days = math.ceil((SemesterEnd - os.time()) / 86400)
 
 if Days < 0 then
     Message.channel:send {
-        content = "Nordic's on vacation!",
+        content = "Nordic got his account back!",
         reference = {
             message = Message,
             mention = false
@@ -22,7 +22,7 @@ end
 
 if Days == 1 then
     Message.channel:send {
-        content = "The final day!",
+        content = "The final day.",
         reference = {
             message = Message,
             mention = false
@@ -32,7 +32,7 @@ if Days == 1 then
 end
 
 Message.channel:send {
-    content = Days.." days until Nordic goes on vacation!",
+    content = Days.." days until Nordic gets his account back.",
     reference = {
         message = Message,
         mention = false
