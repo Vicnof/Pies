@@ -9,3 +9,38 @@ local ValidArguments = {
 if Arguments[2] == nil or ValidArguments[string.lower(Arguments[2])] == nil then
 	Message.channel:send("This command brings up the latest satelite images of the continental United States from NOAA.\n\nTo use it, the first parameter indicates whether you want a view of the `west` coast, `east` coast, or the entire `us`.\nThe second is whether you want the latest static image, or a `gif`.\n\nE.g.,\n`p satelite west` would bring up the latest satelite image of the Western United States.\n`p satelite east gif` would bring up a gif of the latest satelite images of the Eastern United States.\n`p satelite us gif` would do the same, but for the entire continental United States.")
 end
+
+local Characters = "abcdefghijklmnopqrstuvwxyz1234567890"
+local RandomAppend = ""
+
+for i = 1, 5 do
+    local RandomCharacter = math.random(1, string.len(Characters))
+    RandomAppend = RandomAppend..string.sub(Characters, RandomCharacter, RandomCharacter)
+end
+
+local Description
+local URL
+
+if string.lower(Arguments[3]) == "gif" then
+	Description = ValidArguments[Arguments[2]][4]
+	URL = ValidArguments[Arguments[2]][2]
+else
+	Description = ValidArguments[Arguments[2][3]
+		URL = ValidArguments[Arguments[2]][1]
+end
+
+Message.channel:send {
+    content = Description
+    embed = {
+        title = "From NOAA:",
+        url = "https://www.swpc.noaa.gov/communities/aurora-dashboard-experimental",
+        image = {
+            url = URL.."?r="..RandomAppend
+        },
+        color = 165
+    },
+    reference = {
+        message = Message,
+        mention = false
+    }
+}
