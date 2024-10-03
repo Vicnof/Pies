@@ -30,7 +30,7 @@ else
 end
 
 Message.channel:send {
-    content = Description
+    content = Description,
     embed = {
         title = "From NOAA:",
         url = "https://www.swpc.noaa.gov/communities/aurora-dashboard-experimental",
