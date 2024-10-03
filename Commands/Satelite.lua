@@ -34,7 +34,7 @@ Message.channel:send {
     content = Description,
     embed = {
         title = "From NOAA:",
-        url = "https://www.swpc.noaa.gov/communities/aurora-dashboard-experimental",
+        url = "https://www.star.nesdis.noaa.gov/goes/index.php",
         image = {
             url = URL.."?r="..RandomAppend
         },
