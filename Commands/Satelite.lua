@@ -25,7 +25,7 @@ if string.lower(Arguments[3]) == "gif" then
 	Description = ValidArguments[Arguments[2]][4]
 	URL = ValidArguments[Arguments[2]][2]
 else
-	Description = ValidArguments[Arguments[2][3]
+	Description = ValidArguments[Arguments[2]][3]
 		URL = ValidArguments[Arguments[2]][1]
 end
 
