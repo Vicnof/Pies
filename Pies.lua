@@ -123,7 +123,8 @@ local Commands = {
    ["update"] = loadfile("Commands/Update.lua"),
 	["emoji"] = loadfile("Commands/Emoji.lua"),
 	["color"] = loadfile("Commands/Color.lua"),
-	["colour"] = loadfile("Commands/Color.lua")
+	["colour"] = loadfile("Commands/Color.lua"),
+	["satelite"] = loadfile("Commands/Satelite.lua")
 }
 
 Client:on("messageCreate", function(Message)
