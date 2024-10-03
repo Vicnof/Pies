@@ -6,6 +6,8 @@ local JSON = require("json")
 
 Client:enableAllIntents()
 
+math.randomseed(os.time())
+
 local Database = io.open("Data.db")
 local Prepared
 
