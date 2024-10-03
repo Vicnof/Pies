@@ -124,7 +124,7 @@ local Commands = {
 	["emoji"] = loadfile("Commands/Emoji.lua"),
 	["color"] = loadfile("Commands/Color.lua"),
 	["colour"] = loadfile("Commands/Color.lua"),
-	["satelite"] = loadfile("Commands/Satellite.lua"),
+	["satelite"] = loadfile("Commands/Satelite.lua"),
 	["satellite"] = loadfile("Commands/Satellite.lua")
 }
 
