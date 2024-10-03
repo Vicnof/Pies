@@ -8,6 +8,7 @@ local ValidArguments = {
 
 if Arguments[2] == nil or ValidArguments[string.lower(Arguments[2])] == nil then
 	Message.channel:send("This command brings up the latest satelite images of the continental United States from NOAA.\n\nTo use it, the first parameter indicates whether you want a view of the `west` coast, `east` coast, or the entire `us`.\nThe second is whether you want the latest static image, or a `gif`.\n\nE.g.,\n`p satelite west` would bring up the latest satelite image of the Western United States.\n`p satelite east gif` would bring up a gif of the latest satelite images of the Eastern United States.\n`p satelite us gif` would do the same, but for the entire continental United States.")
+	return
 end
 
 local Characters = "abcdefghijklmnopqrstuvwxyz1234567890"
