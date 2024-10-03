@@ -124,7 +124,8 @@ local Commands = {
 	["emoji"] = loadfile("Commands/Emoji.lua"),
 	["color"] = loadfile("Commands/Color.lua"),
 	["colour"] = loadfile("Commands/Color.lua"),
-	["satelite"] = loadfile("Commands/Satelite.lua")
+	["satelite"] = loadfile("Commands/Satellite.lua"),
+	["satellite"] = loadfile("Commands/Satellite.lua")
 }
 
 Client:on("messageCreate", function(Message)
