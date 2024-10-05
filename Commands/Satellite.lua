@@ -11,10 +11,10 @@ if Arguments[2] == nil or ValidArguments[string.lower(Arguments[2])] == nil then
 	return
 end
 
-local Characters = "abcdefghijklmnopqrstuvwxyz1234567890"
+local Characters = "abcdefghijklmnopqrstuvwxyz"
 local RandomAppend = ""
 
-for i = 1, 5 do
+for i = 1, 6 do
     local RandomCharacter = math.random(1, string.len(Characters))
     RandomAppend = RandomAppend..string.sub(Characters, RandomCharacter, RandomCharacter)
 end
