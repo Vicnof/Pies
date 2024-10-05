@@ -36,7 +36,7 @@ Message.channel:send {
         title = "From NOAA:",
         url = "https://www.star.nesdis.noaa.gov/goes/index.php",
         image = {
-            url = URL--.."?r="..RandomAppend
+            url = URL.."?r="--..RandomAppend
         },
         color = 165
     },
