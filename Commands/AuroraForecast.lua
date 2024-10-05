@@ -1,9 +1,9 @@
 local Client, Message, Arguments, Database = ...
 
-local Characters = "abcdefghijklmnopqrstuvwxyz1234567890"
+local Characters = "abcdefghijklmnopqrstuvwxyz"
 local RandomAppend = ""
 
-for i = 1, 5 do
+for i = 1, 6 do
     local RandomCharacter = math.random(1, string.len(Characters))
     RandomAppend = RandomAppend..string.sub(Characters, RandomCharacter, RandomCharacter)
 end
