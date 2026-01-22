@@ -1,6 +1,6 @@
 local Command, Message, Arguments = ...
 
-local Amount = Arguments[2]
+local Amount = tonumber(Arguments[2])
 local DAO = 32
 
 local Chase, Wells, America, Robinhood, Kinecta, First
