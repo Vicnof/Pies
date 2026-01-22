@@ -25,7 +25,7 @@ if Amount < (500 + DAO) then
 end
 
 Message.channel:send {
-	content = "Chase: $"..Chase.."\n".."Wells: $"..Wells.."\n".."America: $"..America.."\n".."Robinhood: $"..Robinhood.."\n".."$"..Amount - (Chase + Wells + America + Robinhood).." left over"
+	content = "Chase: $"..Chase.."\n".."Wells: $"..Wells.."\n".."America: $"..America.."\n".."Robinhood: $"..Robinhood.."\n".."$"..Amount - (Chase + Wells + America + Robinhood).." left over",
 	reference = {
 		message = Message,
 		mention = true
