@@ -125,7 +125,8 @@ local Commands = {
 	["color"] = loadfile("Commands/Color.lua"),
 	["colour"] = loadfile("Commands/Color.lua"),
 	["satelite"] = loadfile("Commands/Satelite.lua"),
-	["satellite"] = loadfile("Commands/Satellite.lua")
+	["satellite"] = loadfile("Commands/Satellite.lua"),
+	["budget"] = loadfile("Commands/Budget.lua")
 }
 
 Client:on("messageCreate", function(Message)
